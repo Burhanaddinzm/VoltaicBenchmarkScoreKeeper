@@ -12,3 +12,4 @@ C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKe
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.pdb
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.genruntimeconfig.cache
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\ref\VoltaicBenchmarkScoreKeeper.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.sourcelink.json

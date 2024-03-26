@@ -18,7 +18,7 @@ string[] noviceBenhchmarks =
 
 string[] intermediateBenchmarks =
     {
-    "INTERMEDIATE",
+    "INTERMEDIATE:",
     "VT ANGLESHOT INTERMEDIATE",
     "VT WAVESHOT INTERMEDIATE",
     "VT FIVESHOT INTERMEDIATE",
@@ -56,14 +56,19 @@ string[] advancedBenchmarks =
     "VT ARCSWITCH ADVANCED"
     };
 
+string[][] benchmarks =
+{
+    noviceBenhchmarks, intermediateBenchmarks, advancedBenchmarks
+};
+
 string fileName = "Score_Keeper.txt";
 string path = Path.Combine(Directory.GetCurrentDirectory(), fileName);
 
 //Main app function
-RunApp(path);
+RunApp(path, benchmarks);
 
 //Functions
-void RunApp(string path)
+void RunApp(string path, string[][] benchmarks)
 {
     ShowMainMenu();
     string? request = Console.ReadLine();
@@ -74,7 +79,7 @@ void RunApp(string path)
         switch (request)
         {
             case "1":
-                GetCorrespondingBenchmark();
+                GetCorrespondingBenchmark(benchmarks);
                 break;
             case "2":
                 ShowScores(path);
@@ -155,7 +160,7 @@ void DeleteScores(string path)
     }
 }
 
-void GetCorrespondingBenchmark()
+void GetCorrespondingBenchmark(string[][] benchmarks)
 {
     Console.WriteLine("");
     ShowTierMenu();
@@ -168,15 +173,15 @@ void GetCorrespondingBenchmark()
         {
             case "1":
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                WriteScore(noviceBenhchmarks);
+                WriteScore(benchmarks[0]);
                 break;
             case "2":
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                WriteScore(intermediateBenchmarks);
+                WriteScore(benchmarks[1]);
                 break;
             case "3":
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                WriteScore(advancedBenchmarks);
+                WriteScore(benchmarks[2]);
                 break;
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
