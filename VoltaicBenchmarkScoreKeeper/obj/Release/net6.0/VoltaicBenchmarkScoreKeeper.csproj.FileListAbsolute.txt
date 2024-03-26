@@ -1,0 +1,14 @@
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\VoltaicBenchmarkScoreKeeper.exe
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\VoltaicBenchmarkScoreKeeper.deps.json
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\VoltaicBenchmarkScoreKeeper.runtimeconfig.json
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\VoltaicBenchmarkScoreKeeper.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\VoltaicBenchmarkScoreKeeper.pdb
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.AssemblyInfoInputs.cache
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.AssemblyInfo.cs
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.csproj.CoreCompileInputs.cache
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\refint\VoltaicBenchmarkScoreKeeper.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.pdb
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\VoltaicBenchmarkScoreKeeper.genruntimeconfig.cache
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Release\net6.0\ref\VoltaicBenchmarkScoreKeeper.dll

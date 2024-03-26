@@ -1,0 +1,5 @@
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\publish\VoltaicBenchmarkScoreKeeper.exe
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\publish\VoltaicBenchmarkScoreKeeper.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\publish\VoltaicBenchmarkScoreKeeper.deps.json
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\publish\VoltaicBenchmarkScoreKeeper.runtimeconfig.json
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Release\net6.0\publish\VoltaicBenchmarkScoreKeeper.pdb
