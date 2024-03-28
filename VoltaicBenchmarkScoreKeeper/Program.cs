@@ -1,4 +1,6 @@
 ﻿//Variables and Arrays
+using VoltaicBenchmarkScoreKeeper.Enums;
+
 string[] noviceBenhchmarks =
     {
     "NOVICE:",
@@ -220,4 +222,25 @@ void TakeUserInput(StreamWriter sw, string[] benchmarkTier, int index)
     int.TryParse(Console.ReadLine(), out int input);
 
     sw.WriteLine($"{benchmarkTier[index]}:{input}");
+}
+
+string CheckRank(string[] benchmarkTier)
+{
+    string rank;
+
+    switch (benchmarkTier[0])
+    {
+        case "NOVICE:":
+            rank = ScenarioRank.Gold.ToString();
+            break;
+        case "INTERMEDIATE:":
+
+            break;
+        case "ADVANCED:":
+
+            break;
+        default:
+            break;
+    }
+    return "";
 }

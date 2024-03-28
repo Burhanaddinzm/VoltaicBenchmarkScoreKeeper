@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Burhanaddinzm\\Desktop\\Code\\VoltaicBenchmarkScoreKeeper\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{79AEF13A-6CC5-4684-8300-6A8EA9BF8C5E}|VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper.csproj|c:\\users\\burhanaddinzm\\desktop\\code\\voltaicbenchmarkscorekeeper\\voltaicbenchmarkscorekeeper\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79AEF13A-6CC5-4684-8300-6A8EA9BF8C5E}|VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper.csproj|solutionrelative:voltaicbenchmarkscorekeeper\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79AEF13A-6CC5-4684-8300-6A8EA9BF8C5E}|VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper.csproj|c:\\users\\burhanaddinzm\\desktop\\code\\voltaicbenchmarkscorekeeper\\voltaicbenchmarkscorekeeper\\enums\\scenariorank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79AEF13A-6CC5-4684-8300-6A8EA9BF8C5E}|VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper.csproj|solutionrelative:voltaicbenchmarkscorekeeper\\enums\\scenariorank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScenarioRank.cs",
+              "DocumentMoniker": "C:\\Users\\Burhanaddinzm\\Desktop\\Code\\VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper\\Enums\\ScenarioRank.cs",
+              "RelativeDocumentMoniker": "VoltaicBenchmarkScoreKeeper\\Enums\\ScenarioRank.cs",
+              "ToolTip": "C:\\Users\\Burhanaddinzm\\Desktop\\Code\\VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper\\Enums\\ScenarioRank.cs",
+              "RelativeToolTip": "VoltaicBenchmarkScoreKeeper\\Enums\\ScenarioRank.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T11:20:25.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Burhanaddinzm\\Desktop\\Code\\VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper\\Program.cs",
+              "RelativeDocumentMoniker": "VoltaicBenchmarkScoreKeeper\\Program.cs",
+              "ToolTip": "C:\\Users\\Burhanaddinzm\\Desktop\\Code\\VoltaicBenchmarkScoreKeeper\\VoltaicBenchmarkScoreKeeper\\Program.cs",
+              "RelativeToolTip": "VoltaicBenchmarkScoreKeeper\\Program.cs",
+              "ViewState": "AQIAANsAAAAAAAAAAAAAAOkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T11:10:54.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
