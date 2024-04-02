@@ -15,7 +15,11 @@ namespace VoltaicBenchmarkScoreKeeper.Enums
         Gold,
         Platinum,
         Diamond,
+        Jade,
         Master,
         GrandMaster,
+        Nova,
+        Astra,
+        Celestial
     }
 }
