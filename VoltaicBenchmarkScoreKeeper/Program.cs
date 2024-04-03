@@ -86,25 +86,33 @@ void RunApp(string path, string[][] benchmarks)
             case "1":
                 GetCorrespondingBenchmark(benchmarks);
                 break;
+
             case "2":
                 ShowScores(path);
                 break;
+
             case "3":
                 int[][] scores = GetData();
-                if (scores == null)
+
+                if (scores.Length < 3)
                 {
+                    Console.WriteLine("");
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Failed to get scores online!");
+                    Console.WriteLine("");
                     break;
                 }
                 WriteScoreOnline(benchmarks, scores);
                 break;
+
             case "4":
                 ChangeUsername();
                 break;
+
             case "5":
                 DeleteScores(path);
                 break;
+
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid Option!");
@@ -196,14 +204,17 @@ void GetCorrespondingBenchmark(string[][] benchmarks)
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 WriteScore(benchmarks[0]);
                 break;
+
             case "2":
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 WriteScore(benchmarks[1]);
                 break;
+
             case "3":
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 WriteScore(benchmarks[2]);
                 break;
+
             default:
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Invalid Option!");
@@ -259,6 +270,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 650) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 650) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT WAVESHOT NOVICE":
                     if (input < 300) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 370) rank = ScenarioRank.Iron.ToString();
@@ -266,6 +278,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 560) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 560) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT SIXSHOT NOVICE":
                     if (input < 600) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 700) rank = ScenarioRank.Iron.ToString();
@@ -273,6 +286,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1040) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 1040) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT MULTISHOT 90 NOVICE":
                     if (input < 750) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 850) rank = ScenarioRank.Iron.ToString();
@@ -280,6 +294,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1200) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 1200) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT SUAVETRACK NOVICE":
                     if (input < 1000) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1300) rank = ScenarioRank.Iron.ToString();
@@ -287,6 +302,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1900) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 1900) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT STEADYTRACK NOVICE":
                     if (input < 1250) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1550) rank = ScenarioRank.Iron.ToString();
@@ -294,6 +310,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2150) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 2150) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT PILLTRACK NOVICE":
                     if (input < 1650) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2050) rank = ScenarioRank.Iron.ToString();
@@ -301,6 +318,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2850) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 2850) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT AXITRACK NOVICE":
                     if (input < 2600) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2900) rank = ScenarioRank.Iron.ToString();
@@ -308,6 +326,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3500) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 3500) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT SPHERESWITCH NOVICE":
                     if (input < 1500) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1600) rank = ScenarioRank.Iron.ToString();
@@ -315,6 +334,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2000) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 2000) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT SKYSWITCH NOVICE":
                     if (input < 1800) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2000) rank = ScenarioRank.Iron.ToString();
@@ -322,6 +342,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2500) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 2500) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT ANGLESWITCH NOVICE":
                     if (input < 1000) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1200) rank = ScenarioRank.Iron.ToString();
@@ -329,6 +350,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1700) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 1700) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 case "VT ARCSWITCH NOVICE":
                     if (input < 900) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1000) rank = ScenarioRank.Iron.ToString();
@@ -336,10 +358,12 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1400) rank = ScenarioRank.Silver.ToString();
                     else if (input >= 1400) rank = ScenarioRank.Gold.ToString();
                     break;
+
                 default:
                     break;
             }
             break;
+
         case "INTERMEDIATE:":
             switch (scenario)
             {
@@ -350,6 +374,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 900) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 900) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT WAVESHOT INTERMEDIATE":
                     if (input < 530) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 590) rank = ScenarioRank.Platinum.ToString();
@@ -357,6 +382,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 750) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 750) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT FIVESHOT INTERMEDIATE":
                     if (input < 1020) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1120) rank = ScenarioRank.Platinum.ToString();
@@ -364,6 +390,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1320) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 1320) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT MULTISHOT 120 INTERMEDIATE":
                     if (input < 1170) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1270) rank = ScenarioRank.Platinum.ToString();
@@ -371,6 +398,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1490) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 1490) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT SUAVETRACK INTERMEDIATE":
                     if (input < 2600) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2900) rank = ScenarioRank.Platinum.ToString();
@@ -378,6 +406,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3500) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 3500) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT STEADYTRACK INTERMEDIATE":
                     if (input < 2200) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2500) rank = ScenarioRank.Platinum.ToString();
@@ -385,6 +414,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3100) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 3100) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT PILLTRACK INTERMEDIATE":
                     if (input < 2000) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2350) rank = ScenarioRank.Platinum.ToString();
@@ -392,6 +422,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3150) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 3150) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT AXITRACK INTERMEDIATE":
                     if (input < 2150) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2450) rank = ScenarioRank.Platinum.ToString();
@@ -399,6 +430,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2900) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 2900) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT SPHERESWITCH INTERMEDIATE":
                     if (input < 1700) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1900) rank = ScenarioRank.Platinum.ToString();
@@ -406,6 +438,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2200) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 2200) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT SKYSWITCH INTERMEDIATE":
                     if (input < 2350) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2550) rank = ScenarioRank.Platinum.ToString();
@@ -413,6 +446,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2900) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 2900) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT DODGESWITCH INTERMEDIATE":
                     if (input < 2100) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2250) rank = ScenarioRank.Platinum.ToString();
@@ -420,6 +454,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2550) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 2550) rank = ScenarioRank.Master.ToString();
                     break;
+
                 case "VT ARCSWITCH INTERMEDIATE":
                     if (input < 1700) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1830) rank = ScenarioRank.Platinum.ToString();
@@ -427,10 +462,12 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2000) rank = ScenarioRank.Jade.ToString();
                     else if (input >= 2000) rank = ScenarioRank.Master.ToString();
                     break;
+
                 default:
                     break;
             }
             break;
+
         case "ADVANCED:":
             switch (scenario)
             {
@@ -441,6 +478,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1300) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1300) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT WAVESHOT ADVANCED":
                     if (input < 860) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1030) rank = ScenarioRank.GrandMaster.ToString();
@@ -448,6 +486,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1375) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1375) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT ARCSHOT ADVANCED":
                     if (input < 900) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1050) rank = ScenarioRank.GrandMaster.ToString();
@@ -455,6 +494,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1400) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1400) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT FOURSHOT WIDE ADVANCED":
                     if (input < 1550) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1650) rank = ScenarioRank.GrandMaster.ToString();
@@ -462,6 +502,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1875) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1875) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT THREESHOT ADVANCED":
                     if (input < 1250) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1350) rank = ScenarioRank.GrandMaster.ToString();
@@ -469,6 +510,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1560) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1560) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT MULTISHOT 180 ADVANCED":
                     if (input < 1490) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 1580) rank = ScenarioRank.GrandMaster.ToString();
@@ -476,6 +518,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 1800) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 1800) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT SUAVETRACK ADVANCED":
                     if (input < 3530) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 4000) rank = ScenarioRank.GrandMaster.ToString();
@@ -483,6 +526,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 4450) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 4450) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT STEADYTRACK ADVANCED":
                     if (input < 3000) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 3550) rank = ScenarioRank.GrandMaster.ToString();
@@ -490,6 +534,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 4350) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 4350) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT MINITRACK ADVANCED":
                     if (input < 2450) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 3000) rank = ScenarioRank.GrandMaster.ToString();
@@ -497,6 +542,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3700) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3700) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT BLINKTRACK ADVANCED":
                     if (input < 2500) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2800) rank = ScenarioRank.GrandMaster.ToString();
@@ -504,6 +550,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3385) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3385) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT PILLTRACK ADVANCED":
                     if (input < 3200) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 3500) rank = ScenarioRank.GrandMaster.ToString();
@@ -511,6 +558,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 4000) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 4000) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT AXITRACK ADVANCED":
                     if (input < 2250) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2500) rank = ScenarioRank.GrandMaster.ToString();
@@ -518,6 +566,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3300) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3300) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT SWAYSWITCH ADVANCED":
                     if (input < 2670) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2870) rank = ScenarioRank.GrandMaster.ToString();
@@ -525,6 +574,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3350) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3350) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT SPHERESWITCH ADVANCED":
                     if (input < 2370) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2570) rank = ScenarioRank.GrandMaster.ToString();
@@ -532,6 +582,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2825) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 2825) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT SKYSWITCH ADVANCED":
                     if (input < 2950) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 3250) rank = ScenarioRank.GrandMaster.ToString();
@@ -539,6 +590,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3525) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3525) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT DODGESWITCH ADVANCED":
                     if (input < 2680) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2980) rank = ScenarioRank.GrandMaster.ToString();
@@ -546,6 +598,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 3275) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 3275) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT ANGLESWITCH ADVANCED":
                     if (input < 2100) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2400) rank = ScenarioRank.GrandMaster.ToString();
@@ -553,6 +606,7 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2825) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 2825) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 case "VT ARCSWITCH ADVANCED":
                     if (input < 2000) rank = ScenarioRank.Unranked.ToString();
                     else if (input < 2250) rank = ScenarioRank.GrandMaster.ToString();
@@ -560,10 +614,12 @@ string CheckRank(string benchmarkTier, string scenario, int input)
                     else if (input < 2750) rank = ScenarioRank.Astra.ToString();
                     else if (input >= 2750) rank = ScenarioRank.Celestial.ToString();
                     break;
+
                 default:
                     break;
             }
             break;
+
         default:
             break;
     }
@@ -580,108 +636,12 @@ void WriteScoreOnline(string[][] benchmarks, int[][] onlineScores)
             sw.WriteLine(benchmarks[j][0]);
             sw.WriteLine(DateTime.Now.ToString());
 
-            for (int i = 0; i < benchmarks[j].Length-1; i++)
+            for (int i = 0; i < benchmarks[j].Length - 1; i++)
             {
                 sw.WriteLine($"{benchmarks[j][i + 1]}:{onlineScores[j][i]} - {CheckRank(benchmarks[j][0], benchmarks[j][i + 1], onlineScores[j][i])}");
             }
             sw.WriteLine("");
-
         }
-    }
-}
-
-int[][]? GetData()
-{
-    ChromeOptions options = new ChromeOptions();
-    options.AddArgument("--headless"); // Run in headless mode (without opening a browser window)
-
-    // Check username
-    string usernamePath = Path.Combine(Directory.GetCurrentDirectory(), "username.txt");
-    string username = "";
-    if (!File.Exists(usernamePath))
-    {
-        Console.WriteLine("Enter username:");
-        username = Console.ReadLine();
-
-        using (StreamWriter sw = new StreamWriter(usernamePath))
-        {
-            sw.WriteLine(username);
-            sw.Close();
-        }
-    }
-    else username = File.ReadAllText(usernamePath);
-
-    // Initialize Chrome driver
-    using (var driver = new ChromeDriver(options))
-    {
-        // Navigate to the webpage
-        driver.Navigate().GoToUrl($"https://app.voltaic.gg/u/{username}");
-
-        // Wait for the page to fully render
-        Thread.Sleep(7000);
-
-        string data = "";
-
-        IReadOnlyCollection<IWebElement> tabs = driver.FindElements(By.CssSelector(".q-tabs__content .q-tab"));
-
-        foreach (var tab in tabs)
-        {
-            // Find child element with class "q-tab__label" and click it
-            IWebElement labelElement = tab.FindElement(By.CssSelector(".q-tab__label"));
-            labelElement.Click();
-
-            // Find the specified div element
-            var divElements = driver.FindElements(By.CssSelector("div[data-v-1501af5c][style*=\"grid-area:\"][style*=\"background: linear-gradient\"][style*=\"color:\"]"));
-
-            // Get the text content of the div element and append it to the string
-            foreach (var div in divElements)
-            {
-                string textContent = div.Text;
-
-                if (textContent.Length >= 1 && textContent.Length <= 4)
-                {
-                    data += textContent.Trim() + " ";
-                }
-            }
-            // Ensures data loading correctly before writing it to string by adding delay
-            Thread.Sleep(1000);
-        }
-
-        // Save data to text file
-        string path = Path.Combine(Directory.GetCurrentDirectory(), "voltaic_scores.txt");
-        StreamWriter sw = new StreamWriter(path);
-        sw.WriteLine(data);
-        sw.Close();
-
-        if (File.Exists(path))
-        {
-            string scorePath = Path.Combine(Directory.GetCurrentDirectory(), "voltaic_scores.txt");
-            var scoresData = File.ReadAllText(scorePath);
-            string[] numarray = scoresData.Split(" ");
-
-            int[] a = new int[12];
-            int[] b = new int[12];
-            int[] c = new int[18];
-
-            for (int i = 0; i < 12; i++)
-            {
-                a[i] = int.Parse(numarray[i]);
-            }
-
-            for (int i = 0; i < 12; i++)
-            {
-                b[i] = int.Parse(numarray[i + 12]);
-            }
-
-            for (int i = 0; i < 18; i++)
-            {
-                c[i] = int.Parse(numarray[i + 24]);
-            }
-
-            int[][] scores = { a, b, c };
-            return scores;
-        }
-        else return null;
     }
 }
 
@@ -712,4 +672,73 @@ void ChangeUsername()
             sw.Close();
         }
     }
+}
+
+int[][] GetData()
+{
+    ChromeOptions options = new ChromeOptions();
+    options.AddArgument("--headless"); // Run in headless mode (without opening a browser window)
+
+    string usernamePath = Path.Combine(Directory.GetCurrentDirectory(), "username.txt");
+    string username = "";
+
+    if (!File.Exists(usernamePath))
+    {
+        Console.WriteLine("Enter username:");
+        username = Console.ReadLine();
+
+        File.WriteAllText(usernamePath, username);
+    }
+    else
+    {
+        username = File.ReadAllText(usernamePath);
+    }
+
+    string path = Path.Combine(Directory.GetCurrentDirectory(), "voltaic_scores.txt");
+    string data = "";
+
+    using (var driver = new ChromeDriver(options))
+    {
+        driver.Navigate().GoToUrl($"https://app.voltaic.gg/u/{username}");
+        Thread.Sleep(7000);
+
+        IReadOnlyCollection<IWebElement> tabs = driver.FindElements(By.CssSelector(".q-tabs__content .q-tab"));
+
+        foreach (var tab in tabs)
+        {
+            IWebElement labelElement = tab.FindElement(By.CssSelector(".q-tab__label"));
+            labelElement.Click();
+
+            Thread.Sleep(1000);
+
+            var divElements = driver.FindElements(By.CssSelector("div[data-v-1501af5c][style*=\"grid-area:\"][style*=\"background: linear-gradient\"][style*=\"color:\"]"));
+
+            foreach (var div in divElements)
+            {
+                string textContent = div.Text.Trim();
+
+                if (!string.IsNullOrEmpty(textContent) && textContent.Length >= 1 && textContent.Length <= 4)
+                {
+                    data += textContent + " ";
+                }
+            }
+        }
+    }
+
+    File.WriteAllText(path, data);
+
+    if (!string.IsNullOrEmpty(data))
+    {
+        var scoresData = data.Split(" ");
+        int[] a = scoresData.Take(12).Select(int.Parse).ToArray();
+        int[] b = scoresData.Skip(12).Take(12).Select(int.Parse).ToArray();
+        int[] c = scoresData.Skip(24).Take(18).Select(int.Parse).ToArray();
+
+        Console.WriteLine("");
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("Scores pulled successfully!");
+        return new int[][] { a, b, c };
+    }
+    else return new int[][] { };
+
 }

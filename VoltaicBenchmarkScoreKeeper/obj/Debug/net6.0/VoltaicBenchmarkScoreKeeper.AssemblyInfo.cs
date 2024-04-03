@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoltaicBenchmarkScoreKeeper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f35ce6495470cfb7435ad008c9667ed95ff9da60")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58f89151127b7892b6604e9417a427b3467289b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoltaicBenchmarkScoreKeeper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoltaicBenchmarkScoreKeeper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
