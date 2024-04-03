@@ -1,4 +1,7 @@
 ﻿//Variables and Arrays
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
 using VoltaicBenchmarkScoreKeeper.Enums;
 
 string[] noviceBenhchmarks =
@@ -87,6 +90,19 @@ void RunApp(string path, string[][] benchmarks)
                 ShowScores(path);
                 break;
             case "3":
+                int[][] scores = GetData();
+                if (scores == null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Failed to get scores online!");
+                    break;
+                }
+                WriteScoreOnline(benchmarks, scores);
+                break;
+            case "4":
+                ChangeUsername();
+                break;
+            case "5":
                 DeleteScores(path);
                 break;
             default:
@@ -99,18 +115,21 @@ void RunApp(string path, string[][] benchmarks)
         ShowMainMenu();
         request = Console.ReadLine();
         Console.WriteLine("");
-
     }
 }
 
 void ShowMainMenu()
 {
     Console.ForegroundColor = ConsoleColor.Cyan;
-    Console.WriteLine("1.Select benchmark tier");
+    Console.WriteLine("1.Input scores manually");
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("2.Show scores");
+    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+    Console.WriteLine("3.Get scores online");
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine("4.Change username");
     Console.ForegroundColor = ConsoleColor.DarkCyan;
-    Console.WriteLine("3.Reset scores");
+    Console.WriteLine("5.Reset scores");
     Console.ResetColor();
     Console.WriteLine("0.Close application");
 }
@@ -549,4 +568,148 @@ string CheckRank(string benchmarkTier, string scenario, int input)
             break;
     }
     return rank;
+}
+
+void WriteScoreOnline(string[][] benchmarks, int[][] onlineScores)
+{
+    Console.WriteLine("");
+    using (StreamWriter sw = new StreamWriter(path, true))
+    {
+        for (int j = 0; j < benchmarks.Length; j++)
+        {
+            sw.WriteLine(benchmarks[j][0]);
+            sw.WriteLine(DateTime.Now.ToString());
+
+            for (int i = 0; i < benchmarks[j].Length-1; i++)
+            {
+                sw.WriteLine($"{benchmarks[j][i + 1]}:{onlineScores[j][i]} - {CheckRank(benchmarks[j][0], benchmarks[j][i + 1], onlineScores[j][i])}");
+            }
+            sw.WriteLine("");
+
+        }
+    }
+}
+
+int[][]? GetData()
+{
+    ChromeOptions options = new ChromeOptions();
+    options.AddArgument("--headless"); // Run in headless mode (without opening a browser window)
+
+    // Check username
+    string usernamePath = Path.Combine(Directory.GetCurrentDirectory(), "username.txt");
+    string username = "";
+    if (!File.Exists(usernamePath))
+    {
+        Console.WriteLine("Enter username:");
+        username = Console.ReadLine();
+
+        using (StreamWriter sw = new StreamWriter(usernamePath))
+        {
+            sw.WriteLine(username);
+            sw.Close();
+        }
+    }
+    else username = File.ReadAllText(usernamePath);
+
+    // Initialize Chrome driver
+    using (var driver = new ChromeDriver(options))
+    {
+        // Navigate to the webpage
+        driver.Navigate().GoToUrl($"https://app.voltaic.gg/u/{username}");
+
+        // Wait for the page to fully render
+        Thread.Sleep(7000);
+
+        string data = "";
+
+        IReadOnlyCollection<IWebElement> tabs = driver.FindElements(By.CssSelector(".q-tabs__content .q-tab"));
+
+        foreach (var tab in tabs)
+        {
+            // Find child element with class "q-tab__label" and click it
+            IWebElement labelElement = tab.FindElement(By.CssSelector(".q-tab__label"));
+            labelElement.Click();
+
+            // Find the specified div element
+            var divElements = driver.FindElements(By.CssSelector("div[data-v-1501af5c][style*=\"grid-area:\"][style*=\"background: linear-gradient\"][style*=\"color:\"]"));
+
+            // Get the text content of the div element and append it to the string
+            foreach (var div in divElements)
+            {
+                string textContent = div.Text;
+
+                if (textContent.Length >= 1 && textContent.Length <= 4)
+                {
+                    data += textContent.Trim() + " ";
+                }
+            }
+            // Ensures data loading correctly before writing it to string by adding delay
+            Thread.Sleep(1000);
+        }
+
+        // Save data to text file
+        string path = Path.Combine(Directory.GetCurrentDirectory(), "voltaic_scores.txt");
+        StreamWriter sw = new StreamWriter(path);
+        sw.WriteLine(data);
+        sw.Close();
+
+        if (File.Exists(path))
+        {
+            string scorePath = Path.Combine(Directory.GetCurrentDirectory(), "voltaic_scores.txt");
+            var scoresData = File.ReadAllText(scorePath);
+            string[] numarray = scoresData.Split(" ");
+
+            int[] a = new int[12];
+            int[] b = new int[12];
+            int[] c = new int[18];
+
+            for (int i = 0; i < 12; i++)
+            {
+                a[i] = int.Parse(numarray[i]);
+            }
+
+            for (int i = 0; i < 12; i++)
+            {
+                b[i] = int.Parse(numarray[i + 12]);
+            }
+
+            for (int i = 0; i < 18; i++)
+            {
+                c[i] = int.Parse(numarray[i + 24]);
+            }
+
+            int[][] scores = { a, b, c };
+            return scores;
+        }
+        else return null;
+    }
+}
+
+void ChangeUsername()
+{
+    string usernamePath = Path.Combine(Directory.GetCurrentDirectory(), "username.txt");
+    string username = "";
+    if (!File.Exists(usernamePath))
+    {
+        Console.WriteLine("Enter username:");
+        username = Console.ReadLine();
+
+        using (StreamWriter sw = new StreamWriter(usernamePath))
+        {
+            sw.WriteLine(username);
+            sw.Close();
+        }
+    }
+    else
+    {
+        File.Delete(usernamePath);
+        Console.WriteLine("Enter username:");
+        username = Console.ReadLine();
+
+        using (StreamWriter sw = new StreamWriter(usernamePath))
+        {
+            sw.WriteLine(username);
+            sw.Close();
+        }
+    }
 }

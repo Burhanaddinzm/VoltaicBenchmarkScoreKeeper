@@ -13,3 +13,11 @@ C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKe
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.genruntimeconfig.cache
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\ref\VoltaicBenchmarkScoreKeeper.dll
 C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.sourcelink.json
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.csproj.AssemblyReference.cache
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\WebDriver.Support.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\bin\Debug\net6.0\WebDriver.dll
+C:\Users\Burhan\source\repos\VoltaicBenchmarkScoreKeeper\VoltaicBenchmarkScoreKeeper\obj\Debug\net6.0\VoltaicBenchmarkScoreKeeper.csproj.CopyComplete
